@@ -1,0 +1,25 @@
+{
+  "name": "react-native-httpserver",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/base.io/react-native-httpserver.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/base.io/react-native-httpserver/issues"
+  },
+  "version": "0.0.7",
+  "author": {
+    "name": "Jorgen Skogmo",
+    "email": "js@base.io",
+    "url": "http://base.io"
+  },
+  "scripts": {},
+  "nativePackage": true,
+  "keywords": [
+    "react-native",
+    "http",
+    "server",
+    "ios"
+  ],
+  "_react-native": "^0.14.2"
+}
