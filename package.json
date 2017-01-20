@@ -1,17 +1,16 @@
 {
-  "name": "react-native-httpserver",
+  "name": "react-native-mongoose",
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/base.io/react-native-httpserver.git"
+    "url": "https://github.com/weixingsun/react-native-mongoose.git"
   },
   "bugs": {
-    "url": "https://gitlab.com/base.io/react-native-httpserver/issues"
+    "url": "https://github.com/weixingsun/react-native-mongoose/issues"
   },
-  "version": "0.0.7",
+  "version": "0.0.1",
   "author": {
-    "name": "Jorgen Skogmo",
-    "email": "js@base.io",
-    "url": "http://base.io"
+    "name": "Weixing Sun",
+    "email": "weixingsun@gmail.com",
   },
   "scripts": {},
   "nativePackage": true,
@@ -19,7 +18,10 @@
     "react-native",
     "http",
     "server",
-    "ios"
+    "mongoose"
   ],
-  "_react-native": "^0.14.2"
+  "peerDependencies": {
+    "react": ">=15.4.0",
+    "react-native": ">=0.40"
+  },
 }
