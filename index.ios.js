@@ -1,8 +1,7 @@
-
-var React 		= require('react-native');
-var _server 	= React.NativeModules.RNHTTPServer;
+var {NativeModules} = require('react-native');
+var _server 	= NativeModules.RNHTTPServer;
 var _port   	= "9999";
-var _base 		= "";
+var _base 	= "";
 var _started	= false;
 
 module.exports 	= {
