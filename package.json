@@ -10,7 +10,7 @@
   "version": "0.0.1",
   "author": {
     "name": "Weixing Sun",
-    "email": "weixingsun@gmail.com",
+    "email": "weixingsun@gmail.com"
   },
   "scripts": {},
   "nativePackage": true,
@@ -23,5 +23,5 @@
   "peerDependencies": {
     "react": ">=15.4.0",
     "react-native": ">=0.40"
-  },
+  }
 }
