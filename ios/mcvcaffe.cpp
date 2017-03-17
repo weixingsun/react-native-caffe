@@ -2,8 +2,8 @@
 #include <iostream>
 #include <cstdlib>
 
-#include "mcvcaffe.h"
-#include "mcvwin.h"
+#include "mcvcaffe.hpp"
+//#include "mcvwin.h"
 
 Classifier::Classifier(const string& model_file,
                        const string& trained_file,

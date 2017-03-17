@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4B985BA31BFA6E160082EAF3"
-               BuildableName = "libRNHTTPServer.a"
-               BlueprintName = "RNHTTPServer"
-               ReferencedContainer = "container:RNHTTPServer.xcodeproj">
+               BuildableName = "libRNCaffe.a"
+               BlueprintName = "RNCaffe"
+               ReferencedContainer = "container:RNCaffe.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B985BA31BFA6E160082EAF3"
-            BuildableName = "libRNHTTPServer.a"
-            BlueprintName = "RNHTTPServer"
-            ReferencedContainer = "container:RNHTTPServer.xcodeproj">
+            BuildableName = "libRNCaffe.a"
+            BlueprintName = "RNCaffe"
+            ReferencedContainer = "container:RNCaffe.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,9 +64,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B985BA31BFA6E160082EAF3"
-            BuildableName = "libRNHTTPServer.a"
-            BlueprintName = "RNHTTPServer"
-            ReferencedContainer = "container:RNHTTPServer.xcodeproj">
+            BuildableName = "libRNCaffe.a"
+            BlueprintName = "RNCaffe"
+            ReferencedContainer = "container:RNCaffe.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

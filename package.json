@@ -1,11 +1,11 @@
 {
-  "name": "react-native-mongoose",
+  "name": "react-native-caffe",
   "repository": {
     "type": "git",
-    "url": "https://github.com/weixingsun/react-native-mongoose.git"
+    "url": "https://github.com/weixingsun/react-native-caffe.git"
   },
   "bugs": {
-    "url": "https://github.com/weixingsun/react-native-mongoose/issues"
+    "url": "https://github.com/weixingsun/react-native-caffe/issues"
   },
   "version": "0.0.1",
   "author": {
@@ -17,11 +17,12 @@
   "keywords": [
     "react-native",
     "http",
-    "server",
-    "mongoose"
+    "machine-learning",
+    "caffe"
   ],
-  "peerDependencies": {
-    "react": ">=15.4.0",
-    "react-native": ">=0.40"
+  "rnpm": {
+    "ios": {
+      "project": "ios/RNCaffe.xcodeproj"
+    }
   }
 }

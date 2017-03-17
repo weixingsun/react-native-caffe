@@ -14,6 +14,7 @@ NSString *TRAINING_DATA = @"haarcascade_frontalface_alt";
 //NSString *TRAINING_DATA = @"haarcascade_frontalface_alt2";  //err
 //NSString *TRAINING_DATA = @"haarcascade_frontalface_alt_tree";
 //NSString *TRAINING_DATA = @"haarcascade_frontalface_default"; //err
+static cv::CascadeClassifier faceDetector;
 
 + (UIImage *)convertImage: (UIImage *)image {
     // 初始化一个图片的二维矩阵cvImage
@@ -84,14 +85,16 @@ NSString *TRAINING_DATA = @"haarcascade_frontalface_alt";
     return false;
 }
 + (NSArray*)facePointDetectForImage:(UIImage*)image{
-    static cv::CascadeClassifier faceDetector;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        NSString* cascadePath = [[NSBundle mainBundle]
-                                 pathForResource:TRAINING_DATA
-                                 ofType:@"xml"];
-        faceDetector.load([cascadePath UTF8String]);
-    });
+    //static cv::CascadeClassifier faceDetector;
+    if(faceDetector.empty()){
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            NSString* cascadePath = [[NSBundle mainBundle]
+                                     pathForResource:TRAINING_DATA
+                                     ofType:@"xml"];
+            faceDetector.load([cascadePath UTF8String]);
+        });
+    }
     cv::Mat faceImage;
     UIImageToMat(image, faceImage);
     // 转为灰度
@@ -110,35 +113,23 @@ NSString *TRAINING_DATA = @"haarcascade_frontalface_alt";
     }
     return [array copy];
 }
+/*
 + (UIImage*)faceDetectForImage:(UIImage*)image {
-    static cv::CascadeClassifier faceDetector;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        NSString* cascadePath = [[NSBundle mainBundle]
-                        pathForResource:TRAINING_DATA
-                                 ofType:@"xml"];
-        faceDetector.load([cascadePath UTF8String]);
-    });
-    cv::Mat faceImage;
-    UIImageToMat(image, faceImage);
-    // 转为灰度
-    cv::Mat gray;
-    cvtColor(faceImage, gray, CV_BGR2GRAY);
-    // 检测人脸并储存
-    vector<cv::Rect>faces;
-    faceDetector.detectMultiScale(gray, faces,1.1,2,0,cv::Size(30,30));
+    NSMutableArray *array = [self facePointDetectForImage:image];
+    
     // 在每个人脸上画一个红色四方形
-    for(unsigned int i= 0;i < faces.size();i++) {
-        const cv::Rect& face = faces[i];
+    for(id rect in array) {
+        //CGRect rect = array.;
+        const cv::Rect& face = rect;
         cv::Point tl(face.x,face.y);
         cv::Point br = tl + cv::Point(face.width,face.height);
         // 四方形的画法
         cv::Scalar magenta = cv::Scalar(255, 0, 0, 255);
-        cv::rectangle(faceImage, tl, br, magenta, 2, 8, 0);
+        cv::rectangle(image, tl, br, magenta, 2, 8, 0);
     }
-    return MatToUIImage(faceImage);
+    return MatToUIImage(image);
 }
-
+*/
 //+ (UIImage*)circleDetectForImage:(UIImage*)image{
 //    cv::Mat circleImage,src_gray;
 //    UIImageToMat(image, circleImage);

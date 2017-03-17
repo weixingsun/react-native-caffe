@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:RNHTTPServer.xcodeproj">
+      location = "self:/Users/weixingsun/react-native-caffe/ios/RNCaffe.xcodeproj">
    </FileRef>
 </Workspace>
